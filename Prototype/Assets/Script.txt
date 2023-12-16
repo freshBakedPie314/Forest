@@ -1,0 +1,10 @@
+Game
+
+-There is a abandond temple
+-A crystal the protects the forest
+-Government closed the path to the temple
+-Some campers took the crystal
+-So at night monsters come out and attacks the player
+-Previous lost campers are disguised as monsters
+-Player needs to find the crystal and bring it back to the temple to lift the curse.
+-Previous campers help you at night.
