@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public Animator playerAnimator;
     public CinemachineVirtualCamera virtualCamera;
+    public Inventory inventory;
     
     public float nervous;
     public float nervousSpeed;
@@ -42,8 +43,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dampingValX = virtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_XDamping;
-        dampingValY = virtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_YDamping;
+        
     }
 
     // Update is called once per frame
@@ -153,6 +153,12 @@ public class PlayerMovement : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawSphere(point.position, attackRadius);
+    }
+
+    public void AddToInventory(Item item)
+    {
+        inventory.AddItenm(item.ItemData, 1);
+        Destroy(item.gameObject);
     }
 
     IEnumerator Dash()
